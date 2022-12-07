@@ -6,8 +6,8 @@
 */
 
 #include <iostream>
-#include <iostream>
 #include <fstream>
+#include <stdio.h>
 
 void writeFile(std::string filename, std::string text) {
     std::ofstream MyFile(filename);
@@ -15,16 +15,20 @@ void writeFile(std::string filename, std::string text) {
     MyFile.close();
 }
 std::string readFile(std::string fileName) {
-    std::string myText;
-    std::string returnText;
     std::ifstream MyReadFile("filename.txt");
-    while (std::getline (MyReadFile, myText)) {
-        returnText.append(myText);
-    }
-    MyReadFile.close();
-    return returnText;
+    std::string readed;
+    getline(MyReadFile, readed);
+    return readed;
 }
 
 void appendFile(std::string fileName, std::string text_to_append) {
     writeFile(fileName, readFile(fileName) += text_to_append);
+}
+
+void createFile(std::string fileName) {
+    writeFile(fileName, "");
+}
+
+void deleteFile(char fileName[]) {
+    std::remove(fileName);
 }
