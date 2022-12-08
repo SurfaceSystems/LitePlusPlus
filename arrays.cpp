@@ -8,7 +8,7 @@
 #include <iostream>
 
 bool findStr(std::string array[], std::string find) {
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(std::string); i++) {
         if(array[i] == find) {
             return true;
         }
@@ -24,7 +24,7 @@ bool findInt(int array[], int find) {
     return false;
 }
 bool findBoo(bool array[], bool find) {
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(bool); i++) {
         if(array[i] == find) {
             return true;
         }
@@ -32,7 +32,7 @@ bool findBoo(bool array[], bool find) {
     return false;
 }
 bool findSho(short array[], short find) {
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(short); i++) {
         if(array[i] == find) {
             return true;
         }
@@ -40,7 +40,7 @@ bool findSho(short array[], short find) {
     return false;
 }
 bool findLon(long array[], long find) {
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(long); i++) {
         if(array[i] == find) {
             return true;
         }
@@ -48,7 +48,7 @@ bool findLon(long array[], long find) {
     return false;
 }
 bool findCha(char array[], char find) {
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(char); i++) {
         if(array[i] == find) {
             return true;
         }
@@ -56,7 +56,7 @@ bool findCha(char array[], char find) {
     return false;
 }
 bool findFlo(float array[], float find) {
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(float); i++) {
         if(array[i] == find) {
             return true;
         }
@@ -70,7 +70,7 @@ bool findFlo(float array[], float find) {
 
 std::string scanStr(std::string array[], char separator) {
     std::string returnText;
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(std::string); i++) {
         returnText += array[i] + separator + " ";
     }
     return returnText;
@@ -85,28 +85,28 @@ std::string scanInt(int array[], char separator) {
 }
 std::string scanBoo(bool array[], char separator) {
     std::string returnText;
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(bool); i++) {
         returnText += array[i] + separator + " ";
     }
     return returnText;
 }
 std::string scanSho(short array[], char separator) {
     std::string returnText;
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(short); i++) {
         returnText += array[i] + separator + " ";
     }
     return returnText;
 }
 std::string scanLon(long array[], char separator) {
     std::string returnText;
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(long); i++) {
         returnText += array[i] + separator + " ";
     }
     return returnText;
 }
 std::string scanCha(char array[], char separator) {
     std::string returnText;
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(char); i++) {
         returnText += array[i] + separator + " ";
     }
     return returnText;
@@ -114,7 +114,7 @@ std::string scanCha(char array[], char separator) {
 
 std::string scanFlo(float array[], char separator) {
     std::string returnText;
-    for(int i = 0; i < sizeof(array) / sizeof(int); i++) {
+    for(int i = 0; i < sizeof(array) / sizeof(float); i++) {
         returnText += to_string(array[i]) + separator + " ";
     }
     return returnText;
