@@ -7,6 +7,8 @@
 #include "lib/logical.cpp"
 #include "lib/initializable.cpp"
 #include "lib/chars.cpp"
+#include "lib/unicode.cpp"
+#include "lib/folders.cpp"
 
 int main() {
     initialize("example_file", "mkdir holaMundo", true);
@@ -14,7 +16,7 @@ int main() {
     pause();
     clear();
     printStr("Whats your name?: ", false);
-    String name = inputStr(true);
+    String name = inputStr();
     printStr("\nHello, " + name, true);
     String myArr[4] = {"Tomate", "Queso", "Leche", "Naranja"};    
     printBoo(findStr(myArr, "Holaa"), true);
@@ -32,5 +34,10 @@ int main() {
     createFile("kdlkf.txt");
     deleteFile("kdlkf.txt");
     printCha(int__char(100), true);
+    initUnicode();
+    printCha(__unicode[234], true);
+    createFolder("MyFolder");
+    getDirectory();
+    deleteFolder("MyFolder");
     return 0;
 }
