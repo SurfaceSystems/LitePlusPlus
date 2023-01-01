@@ -8,6 +8,40 @@
 #include <iostream>
 #include <string>
 
+/*
+std::string searchStr(char sepArr[], char character) {
+    std::string returnText;
+    int i = 0;
+    std::string actualWord;
+    for(int index = 0;index < sizeof(sepArr) / sizeof(char); index++) {
+        if(sepArr[index] != character) {
+            actualWord.append("" + sepArr[index]);
+        } else {
+            returnText[i] = actualWord;
+            i++;
+            actualWord = "";
+        }
+    }
+}
+*/
+void search_str(char chareacter, std::string to_sepa) {
+    int i, j;
+    j = 0;
+    std::string text;
+    std::string text_to_return[1000];
+
+    for(i = 0; i < sizeof(to_sepa.c_str()) / sizeof(char); i++) {
+        if(to_sepa.c_str()[i] == chareacter) {
+            text_to_return[j] = text;
+            j++;
+        } else {
+            text += to_sepa.c_str()[i];
+        }
+    }
+} 
+
+
+
 bool findStr(std::string array[], std::string find) {
     for(int i = 0; i < sizeof(array) / sizeof(std::string); i++) {
         if(array[i] == find) {

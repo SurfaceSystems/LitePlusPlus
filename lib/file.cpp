@@ -1,6 +1,6 @@
 /*
   @author Lite Systems: Blas 
-  LitePlusPlus v_1.3
+  LitePlusPlus v_1.7
   This file contains the things that you need to work with files.
   Lite Surface (c) 2023
 */
@@ -16,9 +16,12 @@ void writeFile(std::string filename, std::string text) {
     MyFile.close();
 }
 std::string readFile(std::string fileName) {
-    std::ifstream MyReadFile("filename.txt");
+    std::ifstream MyReadFile(fileName);
     std::string readed;
+    std::string actualLine;
+    while(actualLine != "\0") {
     std::getline(MyReadFile, readed);
+    }
     return readed;
 }
 

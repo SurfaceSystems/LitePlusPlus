@@ -1,24 +1,16 @@
 /*
   @author Lite Systems: Blas 
-  LitePlusPlus v_1.0
+  LitePlusPlus v_1.7
   This file contains the things that you need to pick data from the screen.
   Lite Surface (c) 2023
 */
 #include <iostream>
 using namespace std;
 
-string inputStr(bool config1) {
-    if(config1) {
-        string text;
-        while (text.empty()) {    
-            cin >> text;
-            return text;
-        }
-    } else {
-        string text;
-        cin >> text;
-        return text;
-    }
+string inputStr() {
+    string text;
+    cin >> text;
+    return text;
 }
 int inputInt() {
     int text;
